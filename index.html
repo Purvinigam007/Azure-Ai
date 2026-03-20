@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Intelligence UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- 🔑 Sidebar -->
+    <div class="sidebar">
+      <h2>Settings</h2>
+
+      <label>Endpoint</label>
+      <input type="text" id="endpoint" placeholder="Enter endpoint">
+
+      <label>API Key</label>
+      <input type="password" id="apikey" placeholder="Enter API key">
+    </div>
+
+    <!-- 📄 Main Content -->
+    <div class="main">
+      <h1>📄 Document Intelligence</h1>
+
+      <div class="card">
+        <label>Upload File</label>
+        <input type="file" id="fileInput">
+      </div>
+
+      <div class="card">
+        <label>Or Enter URL</label>
+        <input type="text" id="urlInput" placeholder="https://...">
+      </div>
+
+      <button onclick="processDocument()">Analyze Document</button>
+
+      <div id="loader" class="hidden">⏳ Processing...</div>
+
+      <div id="output"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
